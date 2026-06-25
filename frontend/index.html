@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Battleship</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="top">
+      <div>
+        <h1>Battleship</h1>
+        <p>Oasis Sapphire Testnet</p>
+      </div>
+      <div class="connect">
+        <div>
+          <span id="net-lamp" class="lamp"></span>
+          <span id="net-label">Not connected</span>
+        </div>
+        <div id="operator">Account: -</div>
+        <button id="btn-connect">Connect wallet</button>
+      </div>
+    </header>
+
+    <section class="status">
+      <div>
+        <span>Shots</span>
+        <strong id="ro-shots">--/--</strong>
+      </div>
+      <div>
+        <span>Hits</span>
+        <strong id="ro-hits">--/--</strong>
+      </div>
+      <div>
+        <span>Status</span>
+        <strong id="ro-state" class="state-idle">No game</strong>
+      </div>
+    </section>
+
+    <section class="controls">
+      <button id="btn-new" disabled>New game</button>
+      <button id="btn-refresh" disabled>Refresh</button>
+      <button id="btn-reveal" disabled>Reveal board</button>
+    </section>
+
+    <section class="board-area">
+      <div class="board-frame">
+        <div class="col-labels" id="col-labels"></div>
+        <div class="row-labels" id="row-labels"></div>
+        <div class="board" id="board"></div>
+      </div>
+      <div class="legend">
+        <span><i class="cell-chip chip-water"></i> Empty</span>
+        <span><i class="cell-chip chip-miss"></i> Miss</span>
+        <span><i class="cell-chip chip-hit"></i> Hit</span>
+        <span><i class="cell-chip chip-ship"></i> Ship</span>
+      </div>
+    </section>
+
+    <section class="log-wrap">
+      <h2>Log</h2>
+      <div id="log" class="log"></div>
+    </section>
+
+    <footer>
+      Contract:
+      <a id="contract-link" href="#" target="_blank" rel="noopener">-</a>
+    </footer>
+  </main>
+
+  <script type="module" src="./main.js"></script>
+</body>
+</html>
